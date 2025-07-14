@@ -21,9 +21,6 @@ use App\Models\Distribuidor;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-// =============================================
-// @USER
-// =============================================
 
 Route::prefix('user')->group(function () {
     Route::get('/all', [Controller::class, 'index']);
@@ -33,17 +30,12 @@ Route::prefix('user')->group(function () {
     Route::put('/{id}', [Controller::class, 'update']);
     Route::get('/', [Controller::class, 'getUser']);
 });
-// =============================================
-// @RUTAS DE UBICACION
-// =============================================
-//muestra la ubicacion de un id_usuario(no importa su rol)
+
 Route::get('ubicacion/{id}', [Controller::class, 'getUbicacion']);
 Route::post('/ubicacion/ruta', [Controller::class, 'getUbicacionesRuta']);
 
 
-// =============================================
-// @RUTAS DE DISTRIBUIDOR
-// =============================================
+
 Route::prefix('distribuidor')->group(function () {
     //muestra solo Usuarios distribuidores(con las ubicaciones y Distribuidor::class)
     Route::get('/', [DistribuidorController::class, 'index']);
@@ -59,10 +51,7 @@ Route::prefix('distribuidor')->group(function () {
 
 
 
-// =============================================
-// @RUTAS DE PRODUCTO
-// =============================================
-// mostrar y mostrar con filtro
+
 Route::get('/producto', [ProductoController::class, 'index']);
 Route::get('/producto/filtro/{id}', [ProductoController::class, 'indexFiltro']);
 // mostrar uno con todos los detalle
@@ -76,10 +65,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
     // actualizar datos
     Route::put('/producto/{id}', [ProductoController::class, 'update']);
-    // ---------------------------------------
-    // @RUTAS USUARIOS/CLIENTES/ADMIN/DISTRIBUIDORES
-    // ---------------------------------------
-    //CRUD
+    
     Route::resource('/cliente', Controller::class);
 
     Route::post('/ubicacion', [Controller::class, 'updateUbicacion']);
@@ -92,9 +78,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 
 
-    // =============================================
-    // @RUTAS DE COMPRA
-    // =============================================
+    
     Route::prefix('compra')->group(function () {
         // 1ero crear el registro 'compra' para despues añadir a los registro de detalle_compra sus id_compra
         // ver como colocar el id_pago segun el enunciado del proyecto antes de crearlo
@@ -107,21 +91,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::get('/{filtro}', [CompraController::class, 'getCompras']);
     });
 
-    // =============================================
-    // @RUTAS DE ASIGNACIONES
-    // =============================================
-    // //INSERTAR datos requeridos, este procesará con las condiciones establecidas
-    // //de comparacion de volumenes de entrega Compra-Distribuidor
-    // Route::post('/asignacion', [AsignacionController::class, 'insertar']);
     Route::get('/asignacion', [AsignacionController::class, 'mostrar']);
 
     Route::patch('/distribuidor/estado', [DistribuidorController::class, 'cambiarEstado']);
     Route::get('/distribuidor/estado', [DistribuidorController::class, 'obtenerEstado']);
 
-    //MOSTRAR -> id, fecha asignada, distancia,
-    // =============================================
-    // @RUTAS DE OBSERVACIONES
-    // =============================================
-    // el distribuidor verá que ingresar en las observaciones
+   
     Route::post('/observacion', [AsignacionController::class, 'insertarObservacion']);
 });
