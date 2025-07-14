@@ -27,9 +27,9 @@ class ProductoSeeder extends Seeder
         // }
         // Producto 1
         DB::table('productos')->insert([
-            'nombre' => 'Zapato Deportivo Pro',
-            'descripcion' => 'Zapato ideal para correr con amortiguación avanzada.',
-            'precio' => 250.00,
+            'nombre' => 'Nike Air Max Runner',
+            'descripcion' => 'Zapatillas deportivas con tecnología de amortiguación Air, perfectas para running.',
+            'precio' => 289.99,
             'volumen' => 5,
             'stock' => 50,
             'id_tipo' => 1,
@@ -40,9 +40,9 @@ class ProductoSeeder extends Seeder
 
         // Producto 2
         DB::table('productos')->insert([
-            'nombre' => 'Zapato Elegante Formal',
-            'descripcion' => 'Perfecto para eventos nocturnos, estilo clásico y cómodo.',
-            'precio' => 310.00,
+            'nombre' => 'Oxford Premium Executive',
+            'descripcion' => 'Zapatos de cuero italiano con acabado brillante, perfectos para ocasiones formales.',
+            'precio' => 349.99,
             'volumen' => 12,
             'stock' => 30,
             'id_tipo' => 2,
@@ -52,9 +52,9 @@ class ProductoSeeder extends Seeder
         ]);
         // Producto 3
         DB::table('productos')->insert([
-            'nombre' => 'Botín Casual Urbano',
-            'descripcion' => 'Botín resistente para uso diario, diseño moderno.',
-            'precio' => 180.00,
+            'nombre' => 'Timberland Urban Explorer',
+            'descripcion' => 'Botines de cuero nobuck resistentes al agua, ideales para el estilo urbano.',
+            'precio' => 219.99,
             'volumen' => 6,
             'stock' => 40,
             'id_tipo' => 3,
@@ -64,9 +64,9 @@ class ProductoSeeder extends Seeder
         ]);
         // Producto 4
         DB::table('productos')->insert([
-            'nombre' => 'Zapatilla Deportiva Pro',
-            'descripcion' => 'Zapatilla ligera para running, con amortiguación avanzada.',
-            'precio' => 250.00,
+            'nombre' => 'Adidas Boost Elite',
+            'descripcion' => 'Zapatillas ultraligeras con tecnología Boost, diseñadas para alto rendimiento.',
+            'precio' => 279.99,
             'volumen' => 4,
             'stock' => 50,
             'id_tipo' => 1,
@@ -77,9 +77,9 @@ class ProductoSeeder extends Seeder
 
         // Producto 5
         DB::table('productos')->insert([
-            'nombre' => 'Sandalia Verano',
-            'descripcion' => 'Sandalia cómoda y elegante para climas cálidos.',
-            'precio' => 120.00,
+            'nombre' => 'Havaianas Premium Resort',
+            'descripcion' => 'Sandalias de diseñador con detalles metálicos, perfectas para días de playa.',
+            'precio' => 159.99,
             'volumen' => 8,
             'stock' => 30,
             'id_tipo' => 2,
@@ -90,9 +90,9 @@ class ProductoSeeder extends Seeder
 
         // Producto 6
         DB::table('productos')->insert([
-            'nombre' => 'Bota de Cuero Clásica',
-            'descripcion' => 'Bota de cuero genuino, ideal para ocasiones formales.',
-            'precio' => 300.00,
+            'nombre' => 'Red Wing Heritage',
+            'descripcion' => 'Botas artesanales de cuero premium con costuras reforzadas y suela Goodyear.',
+            'precio' => 389.99,
             'volumen' => 15,
             'stock' => 25,
             'id_tipo' => 3,
@@ -103,9 +103,9 @@ class ProductoSeeder extends Seeder
 
         // Producto 7
         DB::table('productos')->insert([
-            'nombre' => 'Zapato Casual Minimalista',
-            'descripcion' => 'Zapato de diseño sencillo para uso versátil.',
-            'precio' => 150.00,
+            'nombre' => 'Vans Classic Edition',
+            'descripcion' => 'Zapatillas clásicas de lona con diseño minimalista y plantilla ComfortCush.',
+            'precio' => 179.99,
             'volumen' => 10,
             'stock' => 60,
             'id_tipo' => 4,

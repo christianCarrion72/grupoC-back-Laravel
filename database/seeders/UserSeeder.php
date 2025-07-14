@@ -17,9 +17,9 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $user = User::factory()->create([
-            'name' => 'luis',
-            'telefono' => '7989384',
-            'email' => 'luis@gmail.com',
+            'name' => 'Carlos Rodriguez',
+            'telefono' => '75431298',
+            'email' => 'cliente1@gmail.com',
             'rol' => 'cliente',
             'password' => bcrypt('123456789')
         ]);
@@ -29,9 +29,9 @@ class UserSeeder extends Seeder
             'id_usuario' => $user->id
         ]);
         $user = User::factory()->create([
-            'name' => 'dist 1',
-            'telefono' => '7989384',
-            'email' => 'dist1@gmail.com',
+            'name' => 'Juan Perez',
+            'telefono' => '70912345',
+            'email' => 'test1@gmail.com',
             'rol' => 'distribuidor',
             'password' => bcrypt('123456789')
         ]);
@@ -45,18 +45,18 @@ class UserSeeder extends Seeder
             'id_usuario' => $user->id
         ]);
         Vehiculo::create([
-            'marca' => 'toyota',
-            'modelo' => 'izu 12',
-            'placa' => '123ABC',
-            'capacidad_carga' => '20.0',
-            'anio' => '2002',
+            'marca' => 'Mitsubishi',
+            'modelo' => 'L200',
+            'placa' => 'XYZ789',
+            'capacidad_carga' => '25.5',
+            'anio' => '2020',
             'id_distribuidor' => $distribuidor->id
         ]);
 
         $user = User::factory()->create([
-            'name' => 'dist 2',
-            'telefono' => '7989384',
-            'email' => 'dist2@gmail.com',
+            'name' => 'Maria Garcia',
+            'telefono' => '76543210',
+            'email' => 'test2@gmail.com',
             'rol' => 'distribuidor',
             'password' => bcrypt('123456789')
         ]);
@@ -71,11 +71,11 @@ class UserSeeder extends Seeder
         ]);
         
         Vehiculo::create([
-            'marca' => 'nissan',
-            'modelo' => 'np300',
-            'placa' => '456DEF',
-            'capacidad_carga' => '40',
-            'anio' => '2015',
+            'marca' => 'Ford',
+            'modelo' => 'Ranger',
+            'placa' => 'ABC123',
+            'capacidad_carga' => '35.5',
+            'anio' => '2022',
             'id_distribuidor' => $distribuidor->id
         ]);
 
