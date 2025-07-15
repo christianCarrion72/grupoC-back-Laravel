@@ -24,8 +24,9 @@ class ProductoController extends Controller
                 'volumen' => $producto->volumen,
                 'id_tipo' => $producto->id_tipo,
                 'imagen_url' => $producto->imagen
-                    ? asset('storage/' . $producto->imagen)
-                    : null,
+                // 'imagen_url' => $producto->imagen
+                //     ? asset('storage/' . $producto->imagen)
+                //     : null,
             ];
         });
 

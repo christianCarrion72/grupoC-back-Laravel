@@ -33,7 +33,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 5,
             'stock' => 50,
             'id_tipo' => 1,
-            'imagen' => 'imagenes_productos/zapatero.jpg',
+            //'imagen' => 'imagenes_productos/zapatero.jpg',
+            'imagen' => 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f6105318-3c83-4836-ab5b-96f2cd95de00/AIR+ZOOM+PEGASUS+41.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -46,7 +47,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 12,
             'stock' => 30,
             'id_tipo' => 2,
-            'imagen' => 'imagenes_productos/zapato2.jpg',
+            //'imagen' => 'imagenes_productos/zapato2.jpg',
+            'imagen' => 'https://m.media-amazon.com/images/I/61EsCIhQ0AL._AC_UY900_.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -58,7 +60,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 6,
             'stock' => 40,
             'id_tipo' => 3,
-            'imagen' => 'imagenes_productos/zapito.jpg',
+            //'imagen' => 'imagenes_productos/zapito.jpg',
+            'imagen' => 'https://i.ebayimg.com/thumbs/images/g/gwIAAOSwA3hlmGSu/s-l1200.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -70,7 +73,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 4,
             'stock' => 50,
             'id_tipo' => 1,
-            'imagen' => 'imagenes_productos/zapato4.jpg',
+            //'imagen' => 'imagenes_productos/zapato4.jpg',
+            'imagen' => 'https://i.ebayimg.com/images/g/UdgAAOSwd7RfsWRf/s-l1200.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -83,7 +87,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 8,
             'stock' => 30,
             'id_tipo' => 2,
-            'imagen' => 'imagenes_productos/zapato5.jpg',
+            //'imagen' => 'imagenes_productos/zapato5.jpg',
+            'imagen' => 'https://m.media-amazon.com/images/I/51QF850RRYL._UY900_.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -96,7 +101,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 15,
             'stock' => 25,
             'id_tipo' => 3,
-            'imagen' => 'imagenes_productos/zapato6.jpg',
+            //'imagen' => 'imagenes_productos/zapato6.jpg',
+            'imagen' => 'https://m.media-amazon.com/images/I/51RvnWqwWmL._SY900_.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -109,7 +115,8 @@ class ProductoSeeder extends Seeder
             'volumen' => 10,
             'stock' => 60,
             'id_tipo' => 4,
-            'imagen' => 'imagenes_productos/zapato7.jpg',
+            //'imagen' => 'imagenes_productos/zapato7.jpg',
+            'imagen' => 'https://i.ebayimg.com/images/g/PUsAAOSwSYVf4-l9/s-l400.jpg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
