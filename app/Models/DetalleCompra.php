@@ -11,21 +11,26 @@ class DetalleCompra extends Model
 
     protected $fillable = [
         'cantidad',
-        'subtoral',
+        'subtotal',
         'id_producto',
         'id_compra'
     ];
 
     protected $casts = [
         'cantidad' => 'integer',
-        'subtoral' => 'decimal:2',
+        'subtotal' => 'decimal:2',
         'id_producto' => 'integer',
         'id_compra' => 'integer'
     ];
+
     protected $hidden = [
         'created_at',
-        'updated_at',
+        'updated_at'
     ];
+
+    /**
+     * Obtiene el producto asociado al detalle de compra
+     */
     public function producto()
     {
         return $this->belongsTo(Producto::class, 'id_producto');

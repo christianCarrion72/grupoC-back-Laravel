@@ -7,9 +7,30 @@ use Illuminate\Http\Request;
 use App\Models\Compra;
 use Illuminate\Support\Facades\Validator;
 use App\Models\DetalleCompra;
+use App\Models\Producto;
 
 class CompraController extends Controller
 {
+    /**
+     * Obtiene todos los detalles de una compra específica
+     * 
+     * @param int $id ID de la compra
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDetalles($id)
+    {
+        $detalles = DetalleCompra::where('id_compra', $id)
+            ->with('producto') 
+            ->get();
+
+        if ($detalles->isEmpty()) {
+            return response()->json([
+                'message' => 'No se encontraron detalles para esta compra'
+            ], 404);
+        }
+
+        return response()->json($detalles);
+    }
     public function index()
     {
         $compras = Compra::all();

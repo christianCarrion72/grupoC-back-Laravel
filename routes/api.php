@@ -87,6 +87,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/detalle', [CompraController::class, 'storeDetalle']);
         // [id_compra] Luego usar este comando para sumar los subtotales en la compra e insertarlo en la compra creada, 
         Route::put('/{id}/total', [CompraController::class, 'calcularTotal']);
+        // Obtener todos los detalles de una compra específica
+        Route::get('/{id}/detalles', [CompraController::class, 'getDetalles']);
 
         Route::get('/{filtro}', [CompraController::class, 'getCompras']);
     });
