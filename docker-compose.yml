@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.4
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: MySecr3tP@ssword
+      POSTGRES_DB: sigproyecto
+    container_name: dbsigcontainer
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
